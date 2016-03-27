@@ -4,6 +4,7 @@ import React, {
   View
 } from 'react-native'
 
+import config from './config'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -36,6 +37,7 @@ export default () => {
         Press Cmd+R to reload,{'\n'}
         Cmd+D or shake for dev menu
       </Text>
+      <Text>{JSON.stringify(config)}</Text>
     </View>
   )
 }

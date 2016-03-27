@@ -31,14 +31,13 @@
     if([@"DEVELOPMENT" isEqualToString: ENVIRONMENT]) {
       [AppHub buildManager].debugBuildsEnabled = YES;
     }
-    [AppHub setApplicationID:@"Q65uf8QD1eVS3P4JMlUA"];
+    [AppHub setApplicationID:@""];
     AHBuild *build = [[AppHub buildManager] currentBuild];
     jsCodeLocation = [build.bundle URLForResource:@"main"
                                     withExtension:@"jsbundle"];
   } else {
     [NSException raise:@"ENVIRONMENT var was not valid" format:@""];
   }
-
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"ReactNativeSeed"
                                                initialProperties:nil
